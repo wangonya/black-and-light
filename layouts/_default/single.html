@@ -1,0 +1,44 @@
+{{ partial "header.html" . }}
+
+{{ if .Params.math }}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+{{ end }}
+
+<section id=content>
+  <h1>{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</h1>
+
+  {{ if .Params.date }}
+  <div id=sub-header>
+    {{ .Date.Format (.Site.Params.dateform | default "January 2006") }} · {{ .ReadingTime }} minute read
+  </div>
+  {{ end }}
+
+  <div class="entry-content">
+    {{ .Content }}
+  </div>
+
+  <br/>
+  <span className="ad-free">
+    <a href="https://www.adfreeblog.org/" target="_blank">
+      <img
+        src="https://i.ibb.co/1brQp7P/adfreebanner.jpg"
+        alt="ad free site"
+        width="200"
+        />
+    </a>
+  </span>
+
+  <div id=links>
+    {{ if .PrevInSection }}
+    <a class="basic-alignment left" href="{{.PrevInSection.Permalink}}">&laquo; {{.PrevInSection.Title}}</a>
+    {{ end }}
+    {{ if .NextInSection }}
+    <a class="basic-alignment left" href="{{.NextInSection.Permalink}}">{{.NextInSection.Title}} &raquo;</a>
+    {{ end }}
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+
+
