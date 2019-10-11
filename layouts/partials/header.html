@@ -27,6 +27,7 @@
     </title>
     <link rel="canonical" href="{{ .Permalink }}">
 
+    {{ partial "twitter-card" . }}
     {{ partial "styles.html" . }}
 
     {{ with .OutputFormats.Get "RSS" }}
