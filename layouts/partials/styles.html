@@ -44,7 +44,7 @@
   pre,
   code {
     font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    background-color: #f7f7f7;
+    background-color: #f7f7f7 !important;
   }
 
   code {
@@ -395,26 +395,27 @@
     }
   }
 
-  // ad-free
-  .ad-free img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .ad-free a:link {
-    text-decoration: none;
-  }
-
-  .ad-free a:visited {
-    text-decoration: none;
-  }
-
-  .ad-free a:hover {
-    text-decoration: none;
-  }
-
-  .ad-free a:active {
-    text-decoration: none;
+  @media (prefers-color-scheme: dark) {
+    *,
+    #nav h1 a {
+      color: #fdfdfd;
+    }
+    body {
+      background: #0d1219;
+    }
+    pre,
+    code {
+      background-color: #202c3d !important;
+    }
+    #sub-header,
+    time {
+      color: #bababa;
+    }
+    hr {
+      background: #ebebeb;
+    }
+    blockquote p {
+      color: #a9a9a9;
+    }
   }
 </style>
