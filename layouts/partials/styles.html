@@ -429,4 +429,38 @@
   #meta a {
     color: silver;
   }
+
+  /*tags*/
+  .tags__list {
+    padding-right: 1.5rem;
+    margin: 1.5rem 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+  }
+
+  li.tag__item::before {
+    content: "";
+  }
+
+  .tag__item {
+    margin-right: 1rem;
+    display: inline-block;
+  }
+
+  .tag__item:last-child {
+    margin-right: 0
+  }
+
+  .tag__link {
+    display: inline-block;
+    text-decoration: none;
+    padding: .2em .4em;
+    border-radius: 3px;
+    color: silver;
+    font-size: .8rem;
+  }
 </style>

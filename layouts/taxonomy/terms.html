@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+
+<section id="content">
+    <h1 style="margin-bottom: 1em;">Tags</h1>
+    <ul class="posts_listing">
+        {{ range .Data.Terms.ByCount }}
+        <li>
+            <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a></h2>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+
+{{ partial "footer.html" . }}
