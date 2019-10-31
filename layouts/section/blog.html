@@ -1,6 +1,12 @@
 {{ partial "header.html" . }}
 
 <section id=content>
+  <h1>Blog</h1>
+  <br>
+  <blockquote>
+    <p>The dream behind the Web is of a common information space in which we communicate by sharing information.</p>
+    <footer>Tim Berners-Lee</footer><p></p>
+  </blockquote>
   <ul class=posts_listing>
     {{ range .Site.RegularPages }}
       <li>
